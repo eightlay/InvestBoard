@@ -1,0 +1,12 @@
+{
+    "Token": "TOKEN",
+    "Portfolios": {
+        "BA": 1,
+        "IIS": 2
+    },
+    "StartingDates": {
+        "BA": "01.01.2001",
+        "IIS": "02.02.2002"
+    },
+    "Password": "wordpass"
+}

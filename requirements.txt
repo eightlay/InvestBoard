@@ -1,0 +1,4 @@
+numpy == 1.19.2
+pandas == 1.1.5
+pycbrf == 1.0.1
+tinvest == 2.3.3

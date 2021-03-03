@@ -1,0 +1,2 @@
+id,figi,date,payment,commission,currency,quantity,instrument,operation,payment_RUB,commission_RUB,payment_EUR,commission_EUR,payment_USD,commission_USD
+11111111111,TCS00A102EM7,2020-12-14 17:39:19.728830+03:00,-1.44,,USD,15.0,etf,buy,-105.29,,-1.19,,-1.44,

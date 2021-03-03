@@ -1,0 +1,11 @@
+__pycache__
+
+# Real user's data
+data/exchange_rates.csv
+data/operations.csv
+data/portfolio.csv
+data/user_data.json.
+
+# Temp
+src/dashboard.py
+src/assets/
