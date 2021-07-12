@@ -1,5 +1,5 @@
 import json
-from typing import Optional
+from typing import Dict, List, Any
 from tinkoffapi import TinkoffAPI
 from datapreparer import concat_accounts
 from errors import NoDataPathError, NoUserDataError
@@ -11,13 +11,13 @@ class InvestBoard:
         self.user_data = None
         self.api = None
 
-    def start(self):
+    def start(self) -> None:
         self.read_user_data()
         self.init_api()
         data = self.read_accounts_data()
         data = concat_accounts(data)
 
-    def read_user_data(self):
+    def read_user_data(self) -> None:
         if self.data_path:
             with open(self.data_path) as file:
                 self.user_data = json.load(file)
@@ -25,14 +25,14 @@ class InvestBoard:
             raise NoDataPathError(
                 "Can't read data without path. Set 'data_path' first.")
 
-    def init_api(self):
+    def init_api(self) -> None:
         if self.user_data:
             self.api = TinkoffAPI(self.user_data['Token'])
         else:
             raise NoUserDataError(
                 "Can't init API without token. Use 'read_user_data' method first.")
 
-    def read_accounts_data(self):
+    def read_accounts_data(self) -> Dict[str, List[Any]]:
         if self.user_data:
             names = list(self.user_data['Portfolios'].keys())
             ids = list(self.user_data['Portfolios'].values())
